@@ -4,6 +4,12 @@ language_command =
     .description = Dil Değiştir
 setcommands_command =
     .description = Bot komutlarını ayarlayın
+help_command = 
+     .description = Yardım
+play_command = 
+     .description = Oynat
+invite_command = 
+    .description = Davet
 
 welcome = Hoşgeldiniz!
 helpt = Lorem Ipsum
@@ -12,6 +18,5 @@ language =
     .select = Lütfen dilinizi seçiniz
     .changed = Dil başarıyla değiştirildi!
 admin =
-    .commands-updated = 
-Komutlar güncellendi.
+    .commands-updated = Komutlar güncellendi.
 unhandled =Tanınmayan komut. /start 'ı dene
