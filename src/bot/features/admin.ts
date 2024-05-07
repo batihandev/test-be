@@ -15,5 +15,10 @@ feature.command(
   chatAction("typing"),
   setCommandsHandler,
 );
+feature.command("showid", logHandle("command-showid"), async (ctx) => {
+  await ctx.reply(
+    `Chat ID: ${ctx.chat?.id}\nUser ID: ${ctx.from?.id}\nUser Name: ${ctx.from?.first_name} ${ctx.from?.last_name}`,
+  );
+});
 
 export { composer as adminFeature };
