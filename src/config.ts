@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import  from "dotenv";
 import z from "zod";
 import { parseEnv, port } from "znv";
 import { API_CONSTANTS } from "grammy";
