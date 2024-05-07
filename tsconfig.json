@@ -15,5 +15,5 @@
       "#root/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*", "build"]
+  "include": ["src/**/*"]
 }
