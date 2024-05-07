@@ -12,6 +12,7 @@ import {
   languageFeature,
   unhandledFeature,
   welcomeFeature,
+  inviteFeature,
 } from "#root/bot/features/index.js";
 import { errorHandler } from "#root/bot/handlers/index.js";
 import { i18n, isMultipleLocales } from "#root/bot/i18n.js";
@@ -52,6 +53,7 @@ export function createBot(token: string, options: Options = {}) {
 
   // Handlers
   protectedBot.use(welcomeFeature);
+  protectedBot.use(inviteFeature);
   protectedBot.use(adminFeature);
 
   if (isMultipleLocales) {
