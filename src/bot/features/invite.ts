@@ -22,7 +22,7 @@ const keyboard = {
 };
 
 feature.command("invite", logHandle("command-invite"), (ctx) => {
-  return ctx.reply(ctx.t("welcome"), {
+  return ctx.reply(ctx.t("invite"), {
     reply_markup: keyboard,
   });
 });
