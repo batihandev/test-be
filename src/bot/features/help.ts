@@ -7,7 +7,7 @@ const composer = new Composer<Context>();
 const feature = composer.chatType("private");
 
 feature.command("help", logHandle("command-help"), (ctx) => {
-  return ctx.reply(ctx.t("welcome"));
+  return ctx.reply(ctx.t("helpt"));
 });
 
 export { composer as helpFeature };

@@ -6,6 +6,7 @@ setcommands_command =
     .description = Set bot commands
 
 welcome = Welcome!
+helpt = Lorem Ipsum
 invite = If you want to add your friend, click the button below!
 language = 
     .select = Please, select your language
