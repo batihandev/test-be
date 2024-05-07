@@ -1,10 +1,10 @@
-import { loadEnvFile } from "node:process";
+import dotenv from "dotenv";
 import z from "zod";
 import { parseEnv, port } from "znv";
 import { API_CONSTANTS } from "grammy";
 
 try {
-  loadEnvFile();
+  dotenv.config();
 } catch {
   // No .env file found
 }
