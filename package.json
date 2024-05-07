@@ -60,6 +60,6 @@
     "pnpm": ">=8.0.0"
   },
   "lint-staged": {
-    "*.ts": "npm run lint"
+    "*.ts": "pnpm run lint"
   }
 }
