@@ -10,7 +10,7 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 
   try {
     await server.ready();
-    server.server.emit("listening");
+    server.server.emit("listening", request, response);
   } catch {
     response.status(500).send({ error: "Oops! Something went wrong." });
   }
