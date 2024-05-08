@@ -8,6 +8,9 @@ const bot: Bot = createBot(config.BOT_TOKEN);
 const server = await createServer(bot);
 export default async (request: VercelRequest, response: VercelResponse) => {
   try {
+    await bot.api.setWebhook(config.BOT_WEBHOOK, {
+      allowed_updates: config.BOT_ALLOWED_UPDATES,
+    });
     await server.ready();
 
     server.server.emit("request", request, response);
