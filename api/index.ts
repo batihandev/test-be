@@ -1,17 +1,12 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
-import type { Bot } from "#root/bot/index.js";
-import { config } from "#root/config.js";
+import type { IncomingMessage, ServerResponse } from "node:http";
 import { createBot } from "#root/bot/index.js";
-import { createServer } from "#root/server/index.js"; // Update this path to the actual path of your index.ts file
+import { config } from "#root/config.js";
+import { createServer } from "#root/server/index.js";
 
-const bot: Bot = createBot(config.BOT_TOKEN);
+const bot = createBot(config.BOT_TOKEN);
 const server = await createServer(bot);
-export default async (request: VercelRequest, response: VercelResponse) => {
-  try {
-    await server.ready();
 
-    server.server.emit("request", request, response);
-  } catch {
-    response.status(500).send({ error: "Oops! Something went wrong." });
-  }
+export default async (request: IncomingMessage, response: ServerResponse) => {
+  await server.ready();
+  server.server.emit("request", request, response);
 };
